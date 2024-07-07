@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .profile-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .profile-container h2 {
+            margin: 0 0 10px;
+        }
+        .profile-container p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <h2 id="name">John Doe</h2>
+        <p id="age">Age: 20</p>
+        <p id="grade">Grade: A</p>
+        <p id="email">Email: john.doe@example.com</p>
+    </div>
+
+    <script>
+        // Sample student data
+        const student = {
+            name: "Jane Doe",
+            age: 21,
+            grade: "B",
+            email: "jane.doe@example.com"
+        };
+
+        // Function to display student data
+        function displayStudentProfile(student) {
+            document.getElementById('name').textContent = student.name;
+            document.getElementById('age').textContent = `Age: ${student.age}`;
+            document.getElementById('grade').textContent = `Grade: ${student.grade}`;
+            document.getElementById('email').textContent = `Email: ${student.email}`;
+        }
+
+        // Display the student profile on page load
+        window.onload = function() {
+            displayStudentProfile(student);
+        };
+    </script>
+</body>
+</html>
